@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Excel Template Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .section h3 {
+            margin-top: 0;
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .field-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .field-item {
+            background: white;
+            padding: 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            border-left: 3px solid #3498db;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .info {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .note {
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Dynamic Product Excel Template Generator</h1>
+        
+        <div class="info">
+            <strong>📋 Template Features:</strong>
+            <ul>
+                <li>Flattens all nested JSON structures into Excel columns</li>
+                <li>Excludes image data and auto-generated metadata</li>
+                <li>Supports multiple product variants and options</li>
+                <li>Ready for bulk upload scripting</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>🏷️ Basic Product Information</h3>
+            <div class="field-grid">
+                <div class="field-item">name</div>
+                <div class="field-item">offers</div>
+                <div class="field-item">price</div>
+                <div class="field-item">salePrice</div>
+                <div class="field-item">onDiscount</div>
+                <div class="field-item">type</div>
+                <div class="field-item">slug</div>
+                <div class="field-item">sku</div>
+                <div class="field-item">prod_desc</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🎯 Product Attributes</h3>
+            <div class="field-grid">
+                <div class="field-item">comfort (pipe-separated)</div>
+                <div class="field-item">height (pipe-separated)</div>
+                <div class="field-item">size (pipe-separated)</div>
+                <div class="field-item">tags (pipe-separated)</div>
+                <div class="field-item">Category</div>
+                <div class="field-item">InStock</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>📖 Product Description Tabs</h3>
+            <div class="field-grid">
+                <div class="field-item">prodDesc1_title</div>
+                <div class="field-item">prodDesc1_tab1_title</div>
+                <div class="field-item">prodDesc1_tab1_options</div>
+                <div class="field-item">prodDesc1_tab2_title</div>
+                <div class="field-item">prodDesc1_tab2_options</div>
+                <div class="field-item">prodDesc1_tab3_title</div>
+                <div class="field-item">prodDesc1_tab3_options</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>📋 Product Details Tabs</h3>
+            <div class="field-grid">
+                <div class="field-item">prodDesc2_title</div>
+                <div class="field-item">prodDesc2_tab1_title</div>
+                <div class="field-item">prodDesc2_tab1_options</div>
+                <div class="field-item">prodDesc2_tab2_title</div>
+                <div class="field-item">prodDesc2_tab2_options</div>
+                <div class="field-item">prodDesc2_tab3_title</div>
+                <div class="field-item">prodDesc2_tab3_options</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>❓ FAQ Section</h3>
+            <div class="field-grid">
+                <div class="field-item">faq_questions (JSON format)</div>
+                <div class="field-item">faq_answers (JSON format)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>⭐ Product Features</h3>
+            <div class="field-grid">
+                <div class="field-item">feature1_heading</div>
+                <div class="field-item">feature1_desc</div>
+                <div class="field-item">feature2_heading</div>
+                <div class="field-item">feature2_desc</div>
+                <div class="field-item">feature3_heading</div>
+                <div class="field-item">feature3_desc</div>
+                <div class="field-item">feature4_heading</div>
+                <div class="field-item">feature4_desc</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🔗 Product Group & Variants</h3>
+            <div class="field-grid">
+                <div class="field-item">product_group_name</div>
+                <div class="field-item">product_group_options (JSON format)</div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="generateTemplate()">📥 Download Excel Template</button>
+            <button onclick="generateSampleData()">📄 Download with Sample Data</button>
+        </div>
+
+        <div class="note">
+            <p><strong>📝 Notes:</strong></p>
+            <ul>
+                <li><strong>Pipe-separated:</strong> Use "|" to separate multiple values (e.g., "soft|comfortable|breathable")</li>
+                <li><strong>JSON format:</strong> Use JSON array format for complex nested data</li>
+                <li><strong>Tab options:</strong> Format as JSON array of objects with "label" and "value" properties</li>
+                <li><strong>Images:</strong> Will be handled separately through your upload script</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function generateTemplate() {
+            const headers = [
+                // Basic Information
+                'name', 'offers', 'price', 'salePrice', 'onDiscount', 'type', 'slug', 'sku', 'prod_desc',
+                
+                // Attributes (pipe-separated)
+                'comfort', 'height', 'size', 'tags', 'Category', 'InStock',
+                
+                // Product Description 1
+                'prodDesc1_title', 
+                'prodDesc1_tab1_title', 'prodDesc1_tab1_options',
+                'prodDesc1_tab2_title', 'prodDesc1_tab2_options',
+                'prodDesc1_tab3_title', 'prodDesc1_tab3_options',
+                
+                // Product Description 2
+                'prodDesc2_title',
+                'prodDesc2_tab1_title', 'prodDesc2_tab1_options',
+                'prodDesc2_tab2_title', 'prodDesc2_tab2_options',
+                'prodDesc2_tab3_title', 'prodDesc2_tab3_options',
+                
+                // FAQ
+                'faq_questions', 'faq_answers',
+                
+                // Features (up to 4 features)
+                'feature1_heading', 'feature1_desc',
+                'feature2_heading', 'feature2_desc',
+                'feature3_heading', 'feature3_desc',
+                'feature4_heading', 'feature4_desc',
+                
+                // Product Group
+                'product_group_name', 'product_group_options'
+            ];
+
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.aoa_to_sheet([headers]);
+            
+            // Set column widths
+            ws['!cols'] = headers.map(() => ({wch: 25}));
+            
+            XLSX.utils.book_append_sheet(wb, ws, "Product Template");
+            XLSX.writeFile(wb, "product_upload_template.xlsx");
+        }
+
+        function generateSampleData() {
+            const headers = [
+                'name', 'offers', 'price', 'salePrice', 'onDiscount', 'type', 'slug', 'sku', 'prod_desc',
+                'comfort', 'height', 'size', 'tags', 'Category', 'InStock',
+                'prodDesc1_title', 'prodDesc1_tab1_title', 'prodDesc1_tab1_options',
+                'prodDesc1_tab2_title', 'prodDesc1_tab2_options',
+                'prodDesc1_tab3_title', 'prodDesc1_tab3_options',
+                'prodDesc2_title', 'prodDesc2_tab1_title', 'prodDesc2_tab1_options',
+                'prodDesc2_tab2_title', 'prodDesc2_tab2_options',
+                'prodDesc2_tab3_title', 'prodDesc2_tab3_options',
+                'faq_questions', 'faq_answers',
+                'feature1_heading', 'feature1_desc',
+                'feature2_heading', 'feature2_desc',
+                'feature3_heading', 'feature3_desc',
+                'feature4_heading', 'feature4_desc',
+                'product_group_name', 'product_group_options'
+            ];
+
+            const sampleData = [
+                'GADDA CO 100% Waterproof Premium Cotton Feel Mattress Protector Twin Bed 75x48 Inch',
+                'b',
+                1399,
+                569,
+                false,
+                'mattress-protector',
+                'gadda-co-100-waterproof-premium-cotton-feel-mattress-protector-twin-bed-75x48-inch-ultra-soft-breathable-and-hypoallergenic-fitted-bed-protector-terry-cover-6-3x4-feet-fits-upto-10-inches-white',
+                'GC-6139-W',
+                'GADDA CO 100% Waterproof Premium Cotton Feel Mattress Protector Twin Bed 75x48 Inch|Ultra Soft Breathable & Hypoallergenic Fitted Bed Protector Terry Cover(6.3x4 feet, Fits Upto 10 Inches, White)',
+                'soft',
+                '',
+                'double',
+                '',
+                null,
+                null,
+                'Product Description',
+                'Benefits',
+                '[{"label":"High Quality Mattress Cover is proved to be free of pvc, vinyl, phthalates and fire retardants","value":"-"}]',
+                'Protection',
+                '[{"label":"Protects against dust mites, allergens, and bacteria","value":"-"}]',
+                'Waterproof',
+                '[{"label":"100% Waterproof","value":"-"}]',
+                'Product Details',
+                'Material & Care',
+                '[{"label":"Fabric type","value":null},{"label":"Colour","value":null},{"label":"Closure Type","value":"Pull On"},{"label":"Water Resistance Level","value":"Waterproof"},{"label":"Product Care Instructions","value":"Machine wash / Hand wash"}]',
+                'Dimensions & Weight',
+                '[{"label":"Product Dimensions","value":"78\\"x60\\""},{"label":"Thread Count","value":"250"},{"label":"Item Weight","value":"460 g"},{"label":"Item Dimensions LxWxH","value":"190 x 122 x 0.2 Centimeters"}]',
+                'Return & Refund',
+                '[{"label":"Return ","value":"7 Days"}]',
+                '["What is in the box?"]',
+                '["1 Mattress Protector"]',
+                '100 WATERPROOF COTTON MATTRESS PROTECTOR',
+                'Safeguard your mattress with GADDA CO Premium reusable waterproof mattress protector, designed to keep spills, stains, and moisture away.',
+                'HYPOALLERGENIC & SAFE',
+                'Protects against dust mites, allergens, and bacteria, making it ideal for sensitive skin and allergy sufferers.',
+                'PREMIUM COTTON FEEL',
+                'Made with a super soft, breathable terry fabric for a luxurious cotton feel while ensuring durability, allergy-free & noiseless sleep experience.',
+                'GADDA CO BED PROTECTOR',
+                'Perfect for healthy sleep, pregnancy comfort, kids\' playful needs, pet-friendly durability, older adults\' relaxation, and baby\'s safety - ensuring comfort for every family member.',
+                'Cotton Feel Mattress Protector',
+                '[{"size":"d78\\"x84\\"","color":"Blue","sku":"GC-6120-B","slug":"gadda-co-100-waterproof-premium-cotton-feel-mattress-protector-king-size-78x84-inch-ultra-soft-breathable-and-hypoallergenic-fitted-bed-protector-terry-cover-6-5x7-feet-fits-upto-10-inches-blue"}]'
+            ];
+
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.aoa_to_sheet([headers, sampleData]);
+            
+            // Set column widths
+            ws['!cols'] = headers.map(() => ({wch: 30}));
+            
+            XLSX.utils.book_append_sheet(wb, ws, "Product Template");
+            XLSX.writeFile(wb, "product_upload_template_with_sample.xlsx");
+        }
+    </script>
+</body>
+</html>
