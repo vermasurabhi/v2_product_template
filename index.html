@@ -128,11 +128,20 @@
             <div class="field-grid">
                 <div class="field-item">prodDesc1_title</div>
                 <div class="field-item">prodDesc1_tab1_title</div>
-                <div class="field-item">prodDesc1_tab1_options</div>
+                <div class="field-item">prodDesc1_tab1_label1</div>
+                <div class="field-item">prodDesc1_tab1_value1</div>
+                <div class="field-item">prodDesc1_tab1_label2</div>
+                <div class="field-item">prodDesc1_tab1_value2</div>
+                <div class="field-item">prodDesc1_tab1_label3</div>
+                <div class="field-item">prodDesc1_tab1_value3</div>
                 <div class="field-item">prodDesc1_tab2_title</div>
-                <div class="field-item">prodDesc1_tab2_options</div>
+                <div class="field-item">prodDesc1_tab2_label1</div>
+                <div class="field-item">prodDesc1_tab2_value1</div>
+                <div class="field-item">prodDesc1_tab2_label2</div>
+                <div class="field-item">prodDesc1_tab2_value2</div>
                 <div class="field-item">prodDesc1_tab3_title</div>
-                <div class="field-item">prodDesc1_tab3_options</div>
+                <div class="field-item">prodDesc1_tab3_label1</div>
+                <div class="field-item">prodDesc1_tab3_value1</div>
             </div>
         </div>
 
@@ -141,19 +150,44 @@
             <div class="field-grid">
                 <div class="field-item">prodDesc2_title</div>
                 <div class="field-item">prodDesc2_tab1_title</div>
-                <div class="field-item">prodDesc2_tab1_options</div>
+                <div class="field-item">prodDesc2_tab1_label1</div>
+                <div class="field-item">prodDesc2_tab1_value1</div>
+                <div class="field-item">prodDesc2_tab1_label2</div>
+                <div class="field-item">prodDesc2_tab1_value2</div>
+                <div class="field-item">prodDesc2_tab1_label3</div>
+                <div class="field-item">prodDesc2_tab1_value3</div>
+                <div class="field-item">prodDesc2_tab1_label4</div>
+                <div class="field-item">prodDesc2_tab1_value4</div>
+                <div class="field-item">prodDesc2_tab1_label5</div>
+                <div class="field-item">prodDesc2_tab1_value5</div>
                 <div class="field-item">prodDesc2_tab2_title</div>
-                <div class="field-item">prodDesc2_tab2_options</div>
+                <div class="field-item">prodDesc2_tab2_label1</div>
+                <div class="field-item">prodDesc2_tab2_value1</div>
+                <div class="field-item">prodDesc2_tab2_label2</div>
+                <div class="field-item">prodDesc2_tab2_value2</div>
+                <div class="field-item">prodDesc2_tab2_label3</div>
+                <div class="field-item">prodDesc2_tab2_value3</div>
+                <div class="field-item">prodDesc2_tab2_label4</div>
+                <div class="field-item">prodDesc2_tab2_value4</div>
                 <div class="field-item">prodDesc2_tab3_title</div>
-                <div class="field-item">prodDesc2_tab3_options</div>
+                <div class="field-item">prodDesc2_tab3_label1</div>
+                <div class="field-item">prodDesc2_tab3_value1</div>
             </div>
         </div>
 
         <div class="section">
-            <h3>❓ FAQ Section</h3>
+            <h3>❓ FAQ Section (Up to 5 FAQs)</h3>
             <div class="field-grid">
-                <div class="field-item">faq_questions (JSON format)</div>
-                <div class="field-item">faq_answers (JSON format)</div>
+                <div class="field-item">faq1_question</div>
+                <div class="field-item">faq1_answer</div>
+                <div class="field-item">faq2_question</div>
+                <div class="field-item">faq2_answer</div>
+                <div class="field-item">faq3_question</div>
+                <div class="field-item">faq3_answer</div>
+                <div class="field-item">faq4_question</div>
+                <div class="field-item">faq4_answer</div>
+                <div class="field-item">faq5_question</div>
+                <div class="field-item">faq5_answer</div>
             </div>
         </div>
 
@@ -172,10 +206,22 @@
         </div>
 
         <div class="section">
-            <h3>🔗 Product Group & Variants</h3>
+            <h3>🔗 Product Group & Variants (Up to 10 variants)</h3>
             <div class="field-grid">
                 <div class="field-item">product_group_name</div>
-                <div class="field-item">product_group_options (JSON format)</div>
+                <div class="field-item">variant1_size</div>
+                <div class="field-item">variant1_color</div>
+                <div class="field-item">variant1_sku</div>
+                <div class="field-item">variant1_slug</div>
+                <div class="field-item">variant2_size</div>
+                <div class="field-item">variant2_color</div>
+                <div class="field-item">variant2_sku</div>
+                <div class="field-item">variant2_slug</div>
+                <div class="field-item">variant3_size</div>
+                <div class="field-item">variant3_color</div>
+                <div class="field-item">variant3_sku</div>
+                <div class="field-item">variant3_slug</div>
+                <div class="field-item">... (up to variant10)</div>
             </div>
         </div>
 
@@ -187,9 +233,10 @@
         <div class="note">
             <p><strong>📝 Notes:</strong></p>
             <ul>
-                <li><strong>Pipe-separated:</strong> Use "|" to separate multiple values (e.g., "soft|comfortable|breathable")</li>
-                <li><strong>JSON format:</strong> Use JSON array format for complex nested data</li>
-                <li><strong>Tab options:</strong> Format as JSON array of objects with "label" and "value" properties</li>
+                <li><strong>Simple Text:</strong> Just type normal text in each field</li>
+                <li><strong>Multiple Values:</strong> Use "|" to separate (e.g., "soft|comfortable|breathable")</li>
+                <li><strong>Label-Value Pairs:</strong> Each label gets its own column with corresponding value column</li>
+                <li><strong>Empty Fields:</strong> Leave blank if not applicable - your script will handle nulls</li>
                 <li><strong>Images:</strong> Will be handled separately through your upload script</li>
             </ul>
         </div>
@@ -204,20 +251,40 @@
                 // Attributes (pipe-separated)
                 'comfort', 'height', 'size', 'tags', 'Category', 'InStock',
                 
-                // Product Description 1
+                // Product Description 1 - Simplified
                 'prodDesc1_title', 
-                'prodDesc1_tab1_title', 'prodDesc1_tab1_options',
-                'prodDesc1_tab2_title', 'prodDesc1_tab2_options',
-                'prodDesc1_tab3_title', 'prodDesc1_tab3_options',
+                'prodDesc1_tab1_title', 
+                'prodDesc1_tab1_label1', 'prodDesc1_tab1_value1',
+                'prodDesc1_tab1_label2', 'prodDesc1_tab1_value2',
+                'prodDesc1_tab1_label3', 'prodDesc1_tab1_value3',
+                'prodDesc1_tab2_title',
+                'prodDesc1_tab2_label1', 'prodDesc1_tab2_value1',
+                'prodDesc1_tab2_label2', 'prodDesc1_tab2_value2',
+                'prodDesc1_tab3_title',
+                'prodDesc1_tab3_label1', 'prodDesc1_tab3_value1',
                 
-                // Product Description 2
+                // Product Description 2 - Simplified
                 'prodDesc2_title',
-                'prodDesc2_tab1_title', 'prodDesc2_tab1_options',
-                'prodDesc2_tab2_title', 'prodDesc2_tab2_options',
-                'prodDesc2_tab3_title', 'prodDesc2_tab3_options',
+                'prodDesc2_tab1_title',
+                'prodDesc2_tab1_label1', 'prodDesc2_tab1_value1',
+                'prodDesc2_tab1_label2', 'prodDesc2_tab1_value2',
+                'prodDesc2_tab1_label3', 'prodDesc2_tab1_value3',
+                'prodDesc2_tab1_label4', 'prodDesc2_tab1_value4',
+                'prodDesc2_tab1_label5', 'prodDesc2_tab1_value5',
+                'prodDesc2_tab2_title',
+                'prodDesc2_tab2_label1', 'prodDesc2_tab2_value1',
+                'prodDesc2_tab2_label2', 'prodDesc2_tab2_value2',
+                'prodDesc2_tab2_label3', 'prodDesc2_tab2_value3',
+                'prodDesc2_tab2_label4', 'prodDesc2_tab2_value4',
+                'prodDesc2_tab3_title',
+                'prodDesc2_tab3_label1', 'prodDesc2_tab3_value1',
                 
-                // FAQ
-                'faq_questions', 'faq_answers',
+                // FAQ - Simplified
+                'faq1_question', 'faq1_answer',
+                'faq2_question', 'faq2_answer',
+                'faq3_question', 'faq3_answer',
+                'faq4_question', 'faq4_answer',
+                'faq5_question', 'faq5_answer',
                 
                 // Features (up to 4 features)
                 'feature1_heading', 'feature1_desc',
@@ -225,8 +292,18 @@
                 'feature3_heading', 'feature3_desc',
                 'feature4_heading', 'feature4_desc',
                 
-                // Product Group
-                'product_group_name', 'product_group_options'
+                // Product Group & Variants - Simplified
+                'product_group_name',
+                'variant1_size', 'variant1_color', 'variant1_sku', 'variant1_slug',
+                'variant2_size', 'variant2_color', 'variant2_sku', 'variant2_slug',
+                'variant3_size', 'variant3_color', 'variant3_sku', 'variant3_slug',
+                'variant4_size', 'variant4_color', 'variant4_sku', 'variant4_slug',
+                'variant5_size', 'variant5_color', 'variant5_sku', 'variant5_slug',
+                'variant6_size', 'variant6_color', 'variant6_sku', 'variant6_slug',
+                'variant7_size', 'variant7_color', 'variant7_sku', 'variant7_slug',
+                'variant8_size', 'variant8_color', 'variant8_sku', 'variant8_slug',
+                'variant9_size', 'variant9_color', 'variant9_sku', 'variant9_slug',
+                'variant10_size', 'variant10_color', 'variant10_sku', 'variant10_slug'
             ];
 
             const wb = XLSX.utils.book_new();
@@ -236,79 +313,117 @@
             ws['!cols'] = headers.map(() => ({wch: 25}));
             
             XLSX.utils.book_append_sheet(wb, ws, "Product Template");
-            XLSX.writeFile(wb, "product_upload_template.xlsx");
+            XLSX.writeFile(wb, "product_upload_template_simplified.xlsx");
         }
 
         function generateSampleData() {
             const headers = [
                 'name', 'offers', 'price', 'salePrice', 'onDiscount', 'type', 'slug', 'sku', 'prod_desc',
                 'comfort', 'height', 'size', 'tags', 'Category', 'InStock',
-                'prodDesc1_title', 'prodDesc1_tab1_title', 'prodDesc1_tab1_options',
-                'prodDesc1_tab2_title', 'prodDesc1_tab2_options',
-                'prodDesc1_tab3_title', 'prodDesc1_tab3_options',
-                'prodDesc2_title', 'prodDesc2_tab1_title', 'prodDesc2_tab1_options',
-                'prodDesc2_tab2_title', 'prodDesc2_tab2_options',
-                'prodDesc2_tab3_title', 'prodDesc2_tab3_options',
-                'faq_questions', 'faq_answers',
+                'prodDesc1_title', 'prodDesc1_tab1_title', 
+                'prodDesc1_tab1_label1', 'prodDesc1_tab1_value1',
+                'prodDesc1_tab1_label2', 'prodDesc1_tab1_value2',
+                'prodDesc1_tab1_label3', 'prodDesc1_tab1_value3',
+                'prodDesc1_tab2_title',
+                'prodDesc1_tab2_label1', 'prodDesc1_tab2_value1',
+                'prodDesc1_tab2_label2', 'prodDesc1_tab2_value2',
+                'prodDesc1_tab3_title',
+                'prodDesc1_tab3_label1', 'prodDesc1_tab3_value1',
+                'prodDesc2_title', 'prodDesc2_tab1_title',
+                'prodDesc2_tab1_label1', 'prodDesc2_tab1_value1',
+                'prodDesc2_tab1_label2', 'prodDesc2_tab1_value2',
+                'prodDesc2_tab1_label3', 'prodDesc2_tab1_value3',
+                'prodDesc2_tab1_label4', 'prodDesc2_tab1_value4',
+                'prodDesc2_tab1_label5', 'prodDesc2_tab1_value5',
+                'prodDesc2_tab2_title',
+                'prodDesc2_tab2_label1', 'prodDesc2_tab2_value1',
+                'prodDesc2_tab2_label2', 'prodDesc2_tab2_value2',
+                'prodDesc2_tab2_label3', 'prodDesc2_tab2_value3',
+                'prodDesc2_tab2_label4', 'prodDesc2_tab2_value4',
+                'prodDesc2_tab3_title',
+                'prodDesc2_tab3_label1', 'prodDesc2_tab3_value1',
+                'faq1_question', 'faq1_answer',
+                'faq2_question', 'faq2_answer',
+                'faq3_question', 'faq3_answer',
+                'faq4_question', 'faq4_answer',
+                'faq5_question', 'faq5_answer',
                 'feature1_heading', 'feature1_desc',
                 'feature2_heading', 'feature2_desc',
                 'feature3_heading', 'feature3_desc',
                 'feature4_heading', 'feature4_desc',
-                'product_group_name', 'product_group_options'
+                'product_group_name',
+                'variant1_size', 'variant1_color', 'variant1_sku', 'variant1_slug',
+                'variant2_size', 'variant2_color', 'variant2_sku', 'variant2_slug',
+                'variant3_size', 'variant3_color', 'variant3_sku', 'variant3_slug'
             ];
 
             const sampleData = [
+                // Basic info
                 'GADDA CO 100% Waterproof Premium Cotton Feel Mattress Protector Twin Bed 75x48 Inch',
-                'b',
-                1399,
-                569,
-                false,
-                'mattress-protector',
-                'gadda-co-100-waterproof-premium-cotton-feel-mattress-protector-twin-bed-75x48-inch-ultra-soft-breathable-and-hypoallergenic-fitted-bed-protector-terry-cover-6-3x4-feet-fits-upto-10-inches-white',
+                'b', 1399, 569, false, 'mattress-protector',
+                'gadda-co-100-waterproof-premium-cotton-feel-mattress-protector-twin-bed-75x48-inch',
                 'GC-6139-W',
-                'GADDA CO 100% Waterproof Premium Cotton Feel Mattress Protector Twin Bed 75x48 Inch|Ultra Soft Breathable & Hypoallergenic Fitted Bed Protector Terry Cover(6.3x4 feet, Fits Upto 10 Inches, White)',
-                'soft',
-                '',
-                'double',
-                '',
-                null,
-                null,
-                'Product Description',
-                'Benefits',
-                '[{"label":"High Quality Mattress Cover is proved to be free of pvc, vinyl, phthalates and fire retardants","value":"-"}]',
+                'GADDA CO 100% Waterproof Premium Cotton Feel Mattress Protector',
+                
+                // Attributes
+                'soft', '', 'double', '', null, null,
+                
+                // ProdDesc1
+                'Product Description', 'Benefits',
+                'High Quality Mattress Cover', 'Free of pvc, vinyl, phthalates and fire retardants',
+                '', '', '', '',
                 'Protection',
-                '[{"label":"Protects against dust mites, allergens, and bacteria","value":"-"}]',
+                'Dust Mites Protection', 'Protects against dust mites, allergens, and bacteria',
+                '', '',
                 'Waterproof',
-                '[{"label":"100% Waterproof","value":"-"}]',
-                'Product Details',
-                'Material & Care',
-                '[{"label":"Fabric type","value":null},{"label":"Colour","value":null},{"label":"Closure Type","value":"Pull On"},{"label":"Water Resistance Level","value":"Waterproof"},{"label":"Product Care Instructions","value":"Machine wash / Hand wash"}]',
+                '100% Waterproof', 'Complete waterproof protection',
+                
+                // ProdDesc2
+                'Product Details', 'Material & Care',
+                'Fabric type', 'Cotton Terry',
+                'Colour', 'White',
+                'Closure Type', 'Pull On',
+                'Water Resistance Level', 'Waterproof',
+                'Product Care Instructions', 'Machine wash / Hand wash',
                 'Dimensions & Weight',
-                '[{"label":"Product Dimensions","value":"78\\"x60\\""},{"label":"Thread Count","value":"250"},{"label":"Item Weight","value":"460 g"},{"label":"Item Dimensions LxWxH","value":"190 x 122 x 0.2 Centimeters"}]',
+                'Product Dimensions', '78"x60"',
+                'Thread Count', '250',
+                'Item Weight', '460 g',
+                'Item Dimensions LxWxH', '190 x 122 x 0.2 Centimeters',
                 'Return & Refund',
-                '[{"label":"Return ","value":"7 Days"}]',
-                '["What is in the box?"]',
-                '["1 Mattress Protector"]',
+                'Return Policy', '7 Days',
+                
+                // FAQ
+                'What is in the box?', '1 Mattress Protector',
+                'Is it machine washable?', 'Yes, machine washable',
+                'What sizes are available?', 'Multiple sizes from single to king',
+                '', '', '', '',
+                
+                // Features
                 '100 WATERPROOF COTTON MATTRESS PROTECTOR',
-                'Safeguard your mattress with GADDA CO Premium reusable waterproof mattress protector, designed to keep spills, stains, and moisture away.',
+                'Safeguard your mattress with GADDA CO Premium reusable waterproof mattress protector',
                 'HYPOALLERGENIC & SAFE',
-                'Protects against dust mites, allergens, and bacteria, making it ideal for sensitive skin and allergy sufferers.',
+                'Protects against dust mites, allergens, and bacteria, making it ideal for sensitive skin',
                 'PREMIUM COTTON FEEL',
-                'Made with a super soft, breathable terry fabric for a luxurious cotton feel while ensuring durability, allergy-free & noiseless sleep experience.',
+                'Made with a super soft, breathable terry fabric for a luxurious cotton feel',
                 'GADDA CO BED PROTECTOR',
-                'Perfect for healthy sleep, pregnancy comfort, kids\' playful needs, pet-friendly durability, older adults\' relaxation, and baby\'s safety - ensuring comfort for every family member.',
+                'Perfect for healthy sleep, pregnancy comfort, kids playful needs, pet-friendly durability',
+                
+                // Product group
                 'Cotton Feel Mattress Protector',
-                '[{"size":"d78\\"x84\\"","color":"Blue","sku":"GC-6120-B","slug":"gadda-co-100-waterproof-premium-cotton-feel-mattress-protector-king-size-78x84-inch-ultra-soft-breathable-and-hypoallergenic-fitted-bed-protector-terry-cover-6-5x7-feet-fits-upto-10-inches-blue"}]'
+                'd78"x84"', 'Blue', 'GC-6120-B', 'gadda-co-mattress-protector-king-blue',
+                'd78"x84"', 'White', 'GC-6120-W', 'gadda-co-mattress-protector-king-white',
+                'd72"x36"', 'Blue', 'GC-6121-B', 'gadda-co-mattress-protector-single-blue'
             ];
 
             const wb = XLSX.utils.book_new();
-            const ws = XLSX.utils.aoa_to_sheet([headers, sampleData]);
+            const ws = XLSX.utils.aoa_to_sheet([headers.slice(0, sampleData.length), sampleData]);
             
             // Set column widths
             ws['!cols'] = headers.map(() => ({wch: 30}));
             
             XLSX.utils.book_append_sheet(wb, ws, "Product Template");
-            XLSX.writeFile(wb, "product_upload_template_with_sample.xlsx");
+            XLSX.writeFile(wb, "product_upload_template_simplified_with_sample.xlsx");
         }
     </script>
 </body>
