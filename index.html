@@ -206,22 +206,12 @@
         </div>
 
         <div class="section">
-            <h3>🔗 Product Group & Variants (Up to 10 variants)</h3>
+            <h3>🔗 Product Group & Variants</h3>
             <div class="field-grid">
                 <div class="field-item">product_group_name</div>
-                <div class="field-item">variant1_size</div>
-                <div class="field-item">variant1_color</div>
-                <div class="field-item">variant1_sku</div>
-                <div class="field-item">variant1_slug</div>
-                <div class="field-item">variant2_size</div>
-                <div class="field-item">variant2_color</div>
-                <div class="field-item">variant2_sku</div>
-                <div class="field-item">variant2_slug</div>
-                <div class="field-item">variant3_size</div>
-                <div class="field-item">variant3_color</div>
-                <div class="field-item">variant3_sku</div>
-                <div class="field-item">variant3_slug</div>
-                <div class="field-item">... (up to variant10)</div>
+                <div class="field-item">group_size</div>
+                <div class="field-item">group_color</div>
+                <div class="field-item">group_sku</div>
             </div>
         </div>
 
@@ -294,16 +284,7 @@
                 
                 // Product Group & Variants - Simplified
                 'product_group_name',
-                'variant1_size', 'variant1_color', 'variant1_sku', 'variant1_slug',
-                'variant2_size', 'variant2_color', 'variant2_sku', 'variant2_slug',
-                'variant3_size', 'variant3_color', 'variant3_sku', 'variant3_slug',
-                'variant4_size', 'variant4_color', 'variant4_sku', 'variant4_slug',
-                'variant5_size', 'variant5_color', 'variant5_sku', 'variant5_slug',
-                'variant6_size', 'variant6_color', 'variant6_sku', 'variant6_slug',
-                'variant7_size', 'variant7_color', 'variant7_sku', 'variant7_slug',
-                'variant8_size', 'variant8_color', 'variant8_sku', 'variant8_slug',
-                'variant9_size', 'variant9_color', 'variant9_sku', 'variant9_slug',
-                'variant10_size', 'variant10_color', 'variant10_sku', 'variant10_slug'
+                'group_group', 'group_color', 'group_sku'
             ];
 
             const wb = XLSX.utils.book_new();
@@ -352,9 +333,7 @@
                 'feature3_heading', 'feature3_desc',
                 'feature4_heading', 'feature4_desc',
                 'product_group_name',
-                'variant1_size', 'variant1_color', 'variant1_sku', 'variant1_slug',
-                'variant2_size', 'variant2_color', 'variant2_sku', 'variant2_slug',
-                'variant3_size', 'variant3_color', 'variant3_sku', 'variant3_slug'
+                'group_group', 'group_color', 'group_sku'
             ];
 
             const sampleData = [
@@ -410,10 +389,8 @@
                 'Perfect for healthy sleep, pregnancy comfort, kids playful needs, pet-friendly durability',
                 
                 // Product group
-                'Cotton Feel Mattress Protector',
-                'd78"x84"', 'Blue', 'GC-6120-B', 'gadda-co-mattress-protector-king-blue',
-                'd78"x84"', 'White', 'GC-6120-W', 'gadda-co-mattress-protector-king-white',
-                'd72"x36"', 'Blue', 'GC-6121-B', 'gadda-co-mattress-protector-single-blue'
+                'fzvbinsz2fm75i6zus72f7o5',
+                'd78"x84"', 'Blue', 'GC-6120-B'
             ];
 
             const wb = XLSX.utils.book_new();
